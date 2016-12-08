@@ -58,6 +58,8 @@ void draw(){
     background(bg);
     if (stop) return;
     noCursor();
+    fill(255);
+    rect(0, 3, width, 30);
 
     // Add velocity to the location.
     location.add(velocity);
@@ -128,10 +130,12 @@ void segment(float x, float y, float a) {
 }
 
 void drawType() {
-  fill(#FF0303);
-  stroke(255);
+  fill(#82FF4D);
+  stroke(0);
   strokeWeight(2);
   text(+millis(), width/2, 25);
+  text("Drücke >R< zum Neustarten", width/4, 25);
+  text("Drücke >ENTER< für eine Pause", width-300, 25);
 }
 void pause(){
   pause=true;
@@ -150,7 +154,7 @@ void keyPressed(){
       pause = false; }
   }
   if (key == 'r' || key == 'R') {
-        stop = !stop;
+     setup();
   }
 }
   
