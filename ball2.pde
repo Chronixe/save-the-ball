@@ -42,10 +42,10 @@ void setup()
   // is 640 x 360 pixels.
   bg = loadImage("background.jpg");
   // Set the starting position of the shape
-  xpos = width/5;
-  ypos = height/5;
+  xpos = width/2;
+  ypos = height/2;
   printArray(PFont.list());
-  f = createFont("/home/terrestris/font.ttf", 24);
+  f = createFont("font.ttf", 24);
   textFont(f);
 }
 
@@ -84,7 +84,7 @@ void draw(){
     //stroke(255);
     //strokeWeight(2);
     fill(0,255,0);
-    ellipse(location.x,location.y,20,20);
+    ellipse(location.x,location.y,15,15);
     // Update the position of the shape
     xpos = xpos + ( xspeed * xdirection );
     ypos = ypos + ( yspeed * ydirection );
